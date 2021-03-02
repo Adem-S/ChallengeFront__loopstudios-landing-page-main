@@ -1,0 +1,112 @@
+
+.creation {
+    display: flex;
+    flex-direction: column;
+    //media
+    @media screen and (max-width: 600px) { 
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+
+}
+
+.creation__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    //media
+    @media screen and (max-width: 600px) { 
+        justify-content: center;
+    }
+    h2 {
+        font-size: 3em;
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
+    }
+    a {
+        font-size: 1.2em;
+        text-transform: uppercase;
+        padding: 10px 30px;
+        border: 1px solid ;
+        letter-spacing: 7px;
+        transition: all 0.3s linear;
+        //media
+        @media screen and (max-width: 600px) { 
+            position: absolute;
+            bottom: -75px;
+        }
+        &:hover {
+            cursor: pointer;
+            background: black;
+            color: white;
+        }
+    }
+}
+
+
+
+.creation__gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto ;
+    gap: 2em;
+    width: 100%;
+    //media
+    @media screen and (max-width: 1150px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 900px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 450px) {
+        grid-template-columns: 1fr;
+    }
+   
+}
+
+
+
+.creation__image {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    filter: opacity(100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);  
+    &:hover {
+        filter: opacity(60%);
+        cursor: pointer;
+    }
+    &::after {
+        box-shadow: inset 0px 0px 80px 10px #000000;
+        content: '';
+        display: block;
+       height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+    h2 {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
+        color: hsl(0, 0%, 100%);
+        width: 135px;
+        font-size: 2em;
+        z-index: 2;
+    }
+
+}
+

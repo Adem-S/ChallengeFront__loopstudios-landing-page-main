@@ -1,0 +1,130 @@
+
+
+.menu-mobile {
+    height:0;
+    width: 100%;
+    position: absolute;
+    padding: 4em 2em;
+    top: -1000px;
+    left: 0;
+    opacity: 0;
+    transition: height 0.3s linear, opacity 0.3s linear;
+}
+
+.mobile__bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 2em;
+}
+
+.cross {
+    cursor: pointer;
+}
+
+
+.mobile__nav {
+    margin-top: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    a {
+        font-size: 2em;
+        color: white;
+        text-transform: uppercase;
+        font-size: 3em;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-bottom: 0.5em;
+    }
+   
+}
+
+
+.menu--visible {
+   display: block;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   background: black;
+   z-index: 3;
+   opacity: 1;
+}
+
+header {
+    background: center / cover no-repeat url("../../images/desktop/image-hero.jpg");
+    height: 650px;
+    padding: 2em 120px;
+    margin-bottom: 10em;
+    @media screen and (max-width: 800px) {
+        padding: 2em 3em ;
+    }
+    @media screen and (max-width: 600px) {
+        padding: 2em 1.5em ;
+    }
+    @media screen and (max-width: 450px) {
+        background: center / cover no-repeat url("../../images/mobile/image-hero.jpg")
+    }
+}
+
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    img {
+        width: 10em;
+    }
+}
+
+
+
+.nav__bar  a{
+    color: hsl(0, 0%, 100%) ;
+    margin: 0 10px;
+    //media
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
+
+}
+
+.hamburger {
+    display: none;
+    //media 
+    @media screen and (max-width: 800px) {
+        display: block;
+        height: 1em;
+        width: auto;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+
+}
+
+
+.nav__description {
+    padding: 1em ;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 5em;
+    border: 2px solid hsl(0, 0%, 100%) ;
+    color: hsl(0, 0%, 100%);
+    width: fit-content;
+    //media
+    @media screen and (max-width: 900px) {
+        font-size: 4em;
+    }
+    @media screen and (max-width: 450px) {
+       font-size: 3.5em;
+    }
+    @media screen and (max-width: 600px) { 
+        display: block;
+        padding: 0.5em;
+        width: 100%;
+    }
+
+}
+

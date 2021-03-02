@@ -1,0 +1,76 @@
+@import 'components/nav';
+@import 'components/footer';
+@import 'components/section-vr';
+@import 'components/section-creation';
+
+
+
+* , ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+body {
+    background-color: hsl(0, 0%, 100%);
+    font-size: 15px;
+    font-family: 'Alata', sans-serif;
+    //media
+    @media screen and (max-width: 900px) {
+        font-size: 12px;
+    }
+  
+   
+}
+
+
+a {
+    text-decoration: none;
+    position: relative;
+}
+
+a:after {
+    content: "";
+    position: absolute;
+    background: white;
+    width: 0;
+    height: 2px;
+    right: 50%;
+    opacity: inherit;
+    transform: translateX(50%);
+    bottom: -4px;
+    transition: all 0.3s linear;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+
+
+
+main {
+    padding: 0 120px;
+    display: flex;
+    flex-direction: column;
+    //media
+    @media screen and (max-width: 800px) {
+        padding: 0 3em ;
+    }
+    @media screen and (max-width: 600px) {
+       
+        padding: 0 1.5em ;
+    
+    }
+
+    @media screen and (min-width: 1650px) {
+       
+        font-size: 1.5em;
+    
+    }
+
+}
+
